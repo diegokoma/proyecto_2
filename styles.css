@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /*Colors*/
+  --dcp-primary-color-1000: #000000;
+  --dcp-primary-color-100: #ffffff;
+  --dcp-primary-color-500: #9b9b9b;
+  --dcp-primary-color-200: #f1f1f1;
+  --dcp-primary-color-300: #f6f6f6;
+  --dcp-primary-color-900: #fff852;
+  --dcp-primary-color-800: #231f20;
+  --dcp-primary-color-700: #2c2c2c;
+  --dcp-primary-color-400: #efefef;
+  --dcp-primary-color-600: #a8a8a8;
+  /*Margin*/
+  --dcp-margin-s: 0.6rem; /*9,6px*/
+  --dcp-margin-m: 0.7rem; /*11,2px*/
+  --dcp-margin-l: 0.8rem; /*12,8px*/
+  --dcp-margin-xl: 0.9rem; /*14.4px*/
+  --dcp-margin-xxl: 1rem; /*16px*/
+  --dcp-margin-xxxl: 2rem; /*32px*/
+  /*Padding*/
+  --dcp-padding-xs: 0.3rem; /*4,8px*/
+  --dcp-padding-s: 0.7rem; /*11,2px*/
+  --dcp-padding-m: 0.8rem; /*12,8px*/
+  --dcp-padding-l: 0.9rem; /*14,4px*/
+  --dcp-padding-xl: 1rem; /*16px*/
+  --dcp-padding-xxl: 2rem; /*32px*/
+  /*Borders*/
+  --dcp-border-radius-5: 0.25rem; /*4px*/
+  --dcp-border-radius-10: 0.7rem; /*11,2px*/
+  --dcp-border-radius-20: 1.3rem; /*20,08px*/
+  --dcp-border-radius-100: 100%;
+  /*Font Size*/
+  --dcp-font-size-xxs: 0.7rem;
+  --dcp-font-size-xs: 0.8rem;
+  --dcp-font-size-s: 0.9rem;
+  --dcp-font-size-n: 1rem;
+  --dcp-font-size-m: 1.1rem;
+  --dcp-font-size-l: 1.2rem;
+  --dcp-font-size-xl: 1.3rem;
+  --dcp-font-size-xxl: 1.5rem;
+  --dcp-font-size-xxxl: 2rem;
+  --dcp-font-size-huge: 3rem;
+}
+.header {
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.first_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+  height: 73px;
+  background-color: var(--dcp-primary-color-700);
+}
+.logo_part {
+  width: 30%;
+  height: 100%;
+  align-content: center;
+  cursor: pointer;
+}
+.logo_part > img {
+  width: 48px;
+  height: 48px;
+}
+.hamburguer_menu_box {
+  display: none;
+}
+.nav {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--dcp-primary-color-100);
+  font-size: var(--dcp-font-size-s);
+}
+.nav > p {
+  padding: var(--dcp-padding-xs);
+  cursor: pointer;
+}
+.nav > p:hover {
+  color: var(--dcp-primary-color-900);
+}
+.login_part {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: row-reverse;
+  min-width: 130px;
+}
+.login_part > div {
+  align-content: center;
+}
+.login_part > div > img {
+  width: 28px;
+  cursor: pointer;
+}
+.second_head {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.home_box_banner {
+  width: 100%;
+}
+.home_box_banner > img {
+  width: 100%;
+  height: 100%;
+}
+.filter_part {
+  width: 100%;
+  height: 30px;
+  background-color: var(--dcp-primary-color-400);
+  position: relative;
+}
+.box_filter_button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 35px;
+  border-radius: 50% 50% 100% 100%;
+  height: 32px;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  background-color: var(--dcp-primary-color-400);
+}
+.filter_button_img {
+  background-color: var(--dcp-primary-color-400);
+  width: 25px;
+  height: 12px;
+}
+.filter_box_inside {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+.filter_box_inside > div {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  width: 80px;
+  height: 100%;
+  background-color: red;
+  width: fit-content;
+  padding: var(--dcp-padding-s);
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .first_head {
+    height: 30px;
+  }
+  .logo_part > img {
+    width: 25px;
+    height: 25px;
+  }
+  .hamburguer_menu_box {
+    cursor: pointer;
+    display: block;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    margin: 5px;
+  }
+  .hamburguer_menu_box > img {
+    width: 15px;
+    height: 12px;
+  }
+  .login_part > div > img {
+    width: 15px;
+    cursor: pointer;
+  }
+  .second_head {
+    display: flex;
+    width: 100%;
+    height: 80px;
+  }
+  .home_box_banner > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .filter_part {
+    min-width: 260px;
+    height: 20px;
+  }
+  .box_filter_button {
+    width: 30px;
+    top: 25px;
+    height: 20px;
+  }
+  .filter_button_img {
+    width: 12px;
+    height: 6px;
+  }
+}

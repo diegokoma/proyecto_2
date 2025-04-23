@@ -104,6 +104,8 @@ const zapatillas = [
 //// Filtros
 const MARCAS = []
 let MARCA = ''
+let PRECIO_MAX = 100
+const fillMarcas = () => {
   MARCAS.splice(0)
   for (const zapa of zapatillas) {
     if (!MARCAS.includes(zapa.Marca)) MARCAS.push(zapa.Marca)

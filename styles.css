@@ -343,11 +343,26 @@
   }
   .box_filter_button {
     width: 30px;
-    top: 25px;
+    top: 15px;
     height: 20px;
   }
   .filter_button_img {
     width: 12px;
     height: 6px;
+  }
+  .box_filter_button.moved-down {
+    top: 70px;
+  }
+  .filter_part.clicked {
+    height: 180px;
+  }
+  .footerPart {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerPart > div {
+    max-width: none;
   }
 }

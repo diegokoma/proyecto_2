@@ -141,6 +141,7 @@ const filtroZapatillas = () => {
   })
   // Input range precio
   const zapFilterCashLabel = document.createElement('label')
+  zapFilterCashLabel.classList.add('zapFilterCashLabel')
   zapFilterCashLabel.textContent = 'Precio: '
   const zapFilterCash = document.createElement('input')
   zapFilterCash.type = 'range'
@@ -170,7 +171,19 @@ const filtroZapatillas = () => {
         filtered.push(z)
       }
     }
-    zapSpace(filtered)
+    const prevNoResults = document.querySelector('.noResults')
+    if (prevNoResults) prevNoResults.remove()
+    if (filtered.length > 0) {
+      zapSpace(filtered)
+    } else {
+      const noResults = document.createElement('div')
+      noResults.classList.add('noResults')
+      noResults.textContent = 'No se encontraron zapatillas con esos filtros. Aquí tienes algunas sugerencias:'
+      const sugerencias = zapatillas.sort(() => 0.5 - Math.random()).slice(0, 3)
+      zapSpace(sugerencias)
+      const zapContainer = document.querySelector('.zapContainer')
+      document.body.insertBefore(noResults, zapContainer)
+    }
   })
   buttonFilterZapReset.addEventListener('click', () => {
     MARCA = ''
@@ -209,7 +222,8 @@ const zapSpace = (zapas = zapatillas) => {
     zapContainer.appendChild(zapCard)
   })
 
-  document.body.appendChild(zapContainer)
+  const footer = document.querySelector('.footerPart')
+  document.body.insertBefore(zapContainer, footer)
 }
 zapSpace()
 const printfooterPart = () => {
